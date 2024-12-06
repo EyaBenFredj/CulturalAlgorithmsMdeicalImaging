@@ -39,6 +39,8 @@ class BeliefSpace:
             self.normative_knowledge.sort(key=lambda x: x["performance"], reverse=True)
             self.normative_knowledge = self.normative_knowledge[:10]
 
+
+
     def guide(self, population):
         """
         Influence the population based on the knowledge accumulated in the belief space.
