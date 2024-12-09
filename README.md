@@ -99,8 +99,8 @@ jupyter notebook Untitled.ipynb
 ```
 
 ## 🖼️ Sample Results
+![Capture d’écran 2024-12-09 175016](https://github.com/user-attachments/assets/93080f85-5a54-4436-b976-804bc5d3136a)
 
-![Sample Image](images/sample_visualization.png)
 
 ---
 
