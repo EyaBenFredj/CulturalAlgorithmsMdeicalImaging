@@ -1,0 +1,4 @@
+venv
+.idea
+ .preprocessed_images.npy
+ .preprocessed_masks.npy
