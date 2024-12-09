@@ -88,7 +88,10 @@ Generate visualizations of the preprocessed images and results:
 
 ```bash
 python Visualize_preprocessed.py
+
 ```
+![R3](https://github.com/user-attachments/assets/fe14d661-d392-4d0b-9ccd-99650b5672e0)
+
 
 ### 4. **Interactive Analysis**
 
@@ -99,7 +102,6 @@ jupyter notebook Untitled.ipynb
 ```
 
 ## 🖼️ Sample Results
-![R3](https://github.com/user-attachments/assets/fe14d661-d392-4d0b-9ccd-99650b5672e0)
 
 ![Capture d’écran 2024-12-09 175016](https://github.com/user-attachments/assets/00343faa-b508-4b0c-ac81-131428e3844a)
 ![R1](https://github.com/user-attachments/assets/272a5109-c840-4f93-be6c-95d0b65353b1)
