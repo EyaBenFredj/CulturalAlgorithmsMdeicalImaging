@@ -8,9 +8,10 @@ from tensorflow.keras.optimizers import Adam
 from keras.src.callbacks import EarlyStopping
 from keras.src.models.sequential import Sequential
 from keras.src.utils.numerical_utils import to_categorical
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
-from evaluation import plot_training_history, plot_confusion_matrix, plot_metrics_comparison
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix
+import seaborn as sns
 
+# Function to load images and labels
 def load_images_and_labels(dataset_path, subset_size=500):
     images = []
     labels = []
@@ -40,6 +41,7 @@ def load_images_and_labels(dataset_path, subset_size=500):
 
     return np.expand_dims(images, -1), labels
 
+# Function to build the CNN model
 def build_model(input_shape, num_classes, learning_rate=0.001, num_filters=32, dropout_rate=0.3):
     model = Sequential([
         Input(shape=input_shape),
@@ -54,6 +56,7 @@ def build_model(input_shape, num_classes, learning_rate=0.001, num_filters=32, d
     model.compile(optimizer=Adam(learning_rate=learning_rate), loss='categorical_crossentropy', metrics=['accuracy'])
     return model
 
+# Function to display predictions
 def display_predictions(images, y_true, y_pred, class_names, num_samples=10):
     plt.figure(figsize=(20, 10))
 
@@ -69,6 +72,44 @@ def display_predictions(images, y_true, y_pred, class_names, num_samples=10):
     plt.tight_layout()
     plt.show()
 
+# Function to plot confusion matrix
+def plot_confusion_matrix(y_true, y_pred, labels):
+    cm = confusion_matrix(y_true, y_pred)
+    plt.figure(figsize=(8, 6))
+    sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=labels, yticklabels=labels)
+    plt.xlabel('Predicted')
+    plt.ylabel('Actual')
+    plt.title('Confusion Matrix')
+    plt.show()
+
+# Function to plot training history
+def plot_training_history(history):
+    plt.figure(figsize=(12, 6))
+    plt.plot(history.history['accuracy'], label='Train Accuracy')
+    plt.plot(history.history['val_accuracy'], label='Validation Accuracy')
+    plt.xlabel('Epochs')
+    plt.ylabel('Accuracy')
+    plt.legend()
+    plt.title('Training and Validation Accuracy')
+    plt.show()
+
+# Function to compare metrics
+def plot_metrics_comparison(baseline_metrics, ca_metrics, metric_names):
+    x = np.arange(len(metric_names))
+    width = 0.35
+
+    plt.figure(figsize=(12, 6))
+    plt.bar(x - width/2, baseline_metrics, width, label='Baseline')
+    plt.bar(x + width/2, ca_metrics, width, label='Cultural Algorithm')
+
+    plt.xlabel('Metrics')
+    plt.ylabel('Scores')
+    plt.title('Metrics Comparison')
+    plt.xticks(x, metric_names)
+    plt.legend()
+    plt.show()
+
+# Cultural Algorithm for Hyperparameter Optimization
 def cultural_algorithm_optimization():
     import random
 
@@ -83,7 +124,7 @@ def cultural_algorithm_optimization():
     for i, params in enumerate(population):
         print(f"Evaluating candidate {i+1}: {params}")
         model = build_model(images.shape[1:], labels.shape[1], **params)
-        history = model.fit(X_train, y_train, validation_data=(X_val, y_val), epochs=5, batch_size=16, verbose=0, callbacks=[EarlyStopping(monitor='val_loss', patience=2)])
+        history = model.fit(X_train, y_train, validation_data=(X_val, y_val), epochs=5, batch_size=32, verbose=0, callbacks=[EarlyStopping(monitor='val_loss', patience=1)])
         _, accuracy = model.evaluate(X_val, y_val, verbose=0)
 
         if accuracy > best_accuracy:
@@ -93,6 +134,7 @@ def cultural_algorithm_optimization():
     print(f"Best Hyperparameters Found: {best_params}, Best Accuracy: {best_accuracy:.4f}")
     return best_params
 
+# Main function
 def main():
     dataset_path = r"C:\Users\eyabe\PycharmProjects\CulturalAlgorithmsMdeicalImaging\COVID-19_Radiography_Dataset"
 
@@ -102,17 +144,17 @@ def main():
     X_train, X_temp, y_train, y_temp = train_test_split(images, labels, test_size=0.3, random_state=42)
     X_val, X_test, y_val, y_test = train_test_split(X_temp, y_temp, test_size=0.33, random_state=42)
 
-    # Train the Baseline Model
+    # Train the Baseline Model with fewer epochs
     print("Training Baseline Model...")
     baseline_model = build_model(images.shape[1:], labels.shape[1])
-    history_baseline = baseline_model.fit(X_train, y_train, validation_data=(X_val, y_val), epochs=5, batch_size=16, callbacks=[EarlyStopping(monitor='val_loss', patience=2)])
+    history_baseline = baseline_model.fit(X_train, y_train, validation_data=(X_val, y_val), epochs=3, batch_size=32, callbacks=[EarlyStopping(monitor='val_loss', patience=1)])
 
     y_pred_baseline = baseline_model.predict(X_test).argmax(axis=1)
     y_true = y_test.argmax(axis=1)
 
     # Evaluate the Baseline Model
     accuracy_baseline = accuracy_score(y_true, y_pred_baseline)
-    precision_baseline = precision_score(y_true, y_pred_baseline, average='weighted')
+    precision_baseline = precision_score(y_true, y_pred_baseline, average='weighted', zero_division=1)
     recall_baseline = recall_score(y_true, y_pred_baseline, average='weighted')
     f1_baseline = f1_score(y_true, y_pred_baseline, average='weighted')
 
@@ -120,12 +162,12 @@ def main():
     print("\nOptimizing Hyperparameters with Cultural Algorithm...")
     best_params = cultural_algorithm_optimization()
     ca_model = build_model(images.shape[1:], labels.shape[1], **best_params)
-    history_ca = ca_model.fit(X_train, y_train, validation_data=(X_val, y_val), epochs=5, batch_size=16, callbacks=[EarlyStopping(monitor='val_loss', patience=2)])
+    history_ca = ca_model.fit(X_train, y_train, validation_data=(X_val, y_val), epochs=5, batch_size=32, callbacks=[EarlyStopping(monitor='val_loss', patience=1)])
     y_pred_ca = ca_model.predict(X_test).argmax(axis=1)
 
     # Metrics Comparison
     accuracy_ca = accuracy_score(y_true, y_pred_ca)
-    precision_ca = precision_score(y_true, y_pred_ca, average='weighted')
+    precision_ca = precision_score(y_true, y_pred_ca, average='weighted', zero_division=1)
     recall_ca = recall_score(y_true, y_pred_ca, average='weighted')
     f1_ca = f1_score(y_true, y_pred_ca, average='weighted')
 
