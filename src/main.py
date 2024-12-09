@@ -11,6 +11,7 @@ from keras.src.utils.numerical_utils import to_categorical
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix
 import seaborn as sns
 
+
 # Function to load images and labels
 def load_images_and_labels(dataset_path, subset_size=500):
     images = []
