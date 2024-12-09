@@ -1,4 +1,3 @@
-
 # Cultural Algorithms & ML for Image Processing
 
 ## 📜 Overview
