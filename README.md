@@ -110,17 +110,6 @@ jupyter notebook Untitled.ipynb
 ![A1](https://github.com/user-attachments/assets/8ad3f502-fa6a-4b6c-8f84-2f4a79ab4b35)
 
 
-![R1](https://github.com/user-attachments/assets/272a5109-c840-4f93-be6c-95d0b65353b1)
-![R2](https://github.com/user-attachments/assets/4bbf6ef0-f48f-4f59-b4d2-7ddc29bafbd6)
-![4b6db7dc-58ed-4c7b-8a44-5c1690a26b3b](https://github.com/user-attachments/assets/e5324a1c-1a7a-4e59-82d4-54f64f8fd3b4)
-
-
-
-![Capture d’écran 2024-12-09 175016](https://github.com/user-attachments/assets/00343faa-b508-4b0c-ac81-131428e3844a)
-
----
-![comp](https://github.com/user-attachments/assets/34f0acac-2ebf-41ae-8666-2dea33b9815a)
-![Capture d’écran 2024-12-05 192036](https://github.com/user-attachments/assets/2cb22268-854c-4b7c-a459-31050c2fe93d)
 
 
 ## 📖 How the Cultural Algorithm Works
