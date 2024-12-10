@@ -46,8 +46,8 @@ Cultural_Algorithms_Image_Processing/
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/username/cultural-algorithms-ml.git
-   cd cultural-algorithms-ml
+   git clone https://github.com/EyaBenFredj/CulturalAlgorithmsMdeicalImaging.git
+   cd CulturalAlgorithmsMdeicalImaging
    ```
 
 2. **Set Up the Environment:**
