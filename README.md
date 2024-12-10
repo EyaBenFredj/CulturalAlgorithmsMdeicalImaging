@@ -90,7 +90,7 @@ Generate visualizations of the preprocessed images and results:
 python Visualize_preprocessed.py
 
 ```
-![R3](https://github.com/user-attachments/assets/fe14d661-d392-4d0b-9ccd-99650b5672e0)
+![Capture d’écran 2024-12-10 213552](https://github.com/user-attachments/assets/561b0bc5-a5fc-48b1-85a4-70301dbc434f)
 
 
 ### 4. **Interactive Analysis**
