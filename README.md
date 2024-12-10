@@ -102,8 +102,10 @@ jupyter notebook Untitled.ipynb
 ```
 
 ## 🖼️ Sample Results
-![A1](https://github.com/user-attachments/assets/8ad3f502-fa6a-4b6c-8f84-2f4a79ab4b35)
+Baseline model performance without hyperparameters tuning with Cultural Algorithms
 ![A2](https://github.com/user-attachments/assets/d177979d-c0bf-4975-8dab-475a0b47cb39)
+After hyperparameters tuning
+![A1](https://github.com/user-attachments/assets/8ad3f502-fa6a-4b6c-8f84-2f4a79ab4b35)
 
 CA-Optimized Model Training Logs:
 After hyperparameter tuning, the best model achieved a training accuracy of 88.56% and a validation accuracy of 82.34%.
