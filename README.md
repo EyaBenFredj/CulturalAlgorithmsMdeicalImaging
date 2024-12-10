@@ -102,6 +102,13 @@ jupyter notebook Untitled.ipynb
 ```
 
 ## 🖼️ Sample Results
+![A6](https://github.com/user-attachments/assets/b32a1984-7f43-4c67-a9a4-8a2c5bbf8284)
+![A5](https://github.com/user-attachments/assets/612a532b-8297-4c07-89e4-9204a919f804)
+![A4](https://github.com/user-attachments/assets/12401f74-16c8-4a50-9479-824170ae6b56)
+![A3](https://github.com/user-attachments/assets/463cfc86-ffbd-468c-8e0b-0038456473fd)
+![A2](https://github.com/user-attachments/assets/d177979d-c0bf-4975-8dab-475a0b47cb39)
+![A1](https://github.com/user-attachments/assets/8ad3f502-fa6a-4b6c-8f84-2f4a79ab4b35)
+
 
 ![R1](https://github.com/user-attachments/assets/272a5109-c840-4f93-be6c-95d0b65353b1)
 ![R2](https://github.com/user-attachments/assets/4bbf6ef0-f48f-4f59-b4d2-7ddc29bafbd6)
