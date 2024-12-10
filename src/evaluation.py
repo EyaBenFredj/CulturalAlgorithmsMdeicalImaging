@@ -5,7 +5,6 @@ import numpy as np
 def plot_training_history(history):
     plt.figure(figsize=(12, 5))
 
-    # Plot accuracy
     plt.subplot(1, 2, 1)
     plt.plot(history.history['accuracy'], label='Train Accuracy')
     plt.plot(history.history['val_accuracy'], label='Validation Accuracy')
