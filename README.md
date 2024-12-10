@@ -102,12 +102,20 @@ jupyter notebook Untitled.ipynb
 ```
 
 ## 🖼️ Sample Results
+![A1](https://github.com/user-attachments/assets/8ad3f502-fa6a-4b6c-8f84-2f4a79ab4b35)
+![A2](https://github.com/user-attachments/assets/d177979d-c0bf-4975-8dab-475a0b47cb39)
+
+CA-Optimized Model Training Logs:
+After hyperparameter tuning, the best model achieved a training accuracy of 88.56% and a validation accuracy of 82.34%.
+The hyperparameter optimization process found the best combination of learning_rate, num_filters, and dropout_rate, leading to improved accuracy.
 ![A6](https://github.com/user-attachments/assets/b32a1984-7f43-4c67-a9a4-8a2c5bbf8284)
+Baseline vs. Cultural Algorithm:
+The Baseline has consistently higher scores (Accuracy, Precision, Recall, F1-Score) compared to the model trained with the Cultural Algorithm.
+This suggests that the baseline model performed slightly better in terms of overall classification metrics.
+
 ![A5](https://github.com/user-attachments/assets/612a532b-8297-4c07-89e4-9204a919f804)
 ![A4](https://github.com/user-attachments/assets/12401f74-16c8-4a50-9479-824170ae6b56)
 ![A3](https://github.com/user-attachments/assets/463cfc86-ffbd-468c-8e0b-0038456473fd)
-![A2](https://github.com/user-attachments/assets/d177979d-c0bf-4975-8dab-475a0b47cb39)
-![A1](https://github.com/user-attachments/assets/8ad3f502-fa6a-4b6c-8f84-2f4a79ab4b35)
 
 
 
