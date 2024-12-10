@@ -104,7 +104,7 @@ jupyter notebook Untitled.ipynb
 ## 🖼️ Sample Results
 
 ![R1](https://github.com/user-attachments/assets/272a5109-c840-4f93-be6c-95d0b65353b1)
-![R2](https://github.com/user-attachments/assets/f6b160c5-70b1-457a-9ed4-1da366138c51)
+![R2](https://github.com/user-attachments/assets/4bbf6ef0-f48f-4f59-b4d2-7ddc29bafbd6)
 ![4b6db7dc-58ed-4c7b-8a44-5c1690a26b3b](https://github.com/user-attachments/assets/e5324a1c-1a7a-4e59-82d4-54f64f8fd3b4)
 
 
