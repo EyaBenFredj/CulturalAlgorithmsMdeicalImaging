@@ -108,7 +108,7 @@ After hyperparameters tuning
 ![A1](https://github.com/user-attachments/assets/8ad3f502-fa6a-4b6c-8f84-2f4a79ab4b35)
 
 CA-Optimized Model Training Logs:
-After hyperparameter tuning, the best model achieved a training accuracy of 88.56% and a validation accuracy of 82.34%.
+After hyperparameter tuning, the best model achieved a training accuracy of 88.56% and a validation accuracy of 80.37%.
 The hyperparameter optimization process found the best combination of learning_rate, num_filters, and dropout_rate, leading to improved accuracy.
 ![A6](https://github.com/user-attachments/assets/b32a1984-7f43-4c67-a9a4-8a2c5bbf8284)
 Baseline vs. Cultural Algorithm:
