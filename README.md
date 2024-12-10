@@ -113,7 +113,7 @@ jupyter notebook Untitled.ipynb
 
 ---
 ![comp](https://github.com/user-attachments/assets/34f0acac-2ebf-41ae-8666-2dea33b9815a)
-![cost](https://github.com/user-attachments/assets/62682f61-cd8e-4eb9-9640-9ab36125b79a)
+![Capture d’écran 2024-12-05 192036](https://github.com/user-attachments/assets/2cb22268-854c-4b7c-a459-31050c2fe93d)
 
 
 ## 📖 How the Cultural Algorithm Works
