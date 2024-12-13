@@ -105,7 +105,6 @@ jupyter notebook Untitled.ipynb
 Difference Result Baseline model performance without hyperparameters tuning with Cultural Algorithms
 ![A2](https://github.com/user-attachments/assets/f34b3d39-cde0-4b53-a1e9-78a6f9203b63)
 ![image](https://github.com/user-attachments/assets/3fec1cc4-866f-46b6-9116-cc120e128758)
-![image](https://github.com/user-attachments/assets/2928e7b9-d853-4dae-a747-b4cfff2499f8)
 
 Cultural Algorithms-Optimized Model Training Logs: After hyperparameter tuning
 ![A1](https://github.com/user-attachments/assets/8ad3f502-fa6a-4b6c-8f84-2f4a79ab4b35)
